@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto Slab', serif;
+    color: #DCDCDC;
+}
+body{
+    background: #282828;
+    display: flex;
+    justify-content: center;
+}
+
+#sett {
+    position: relative;
+    left: -30px;
+    top: -30px;
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+    border: #282828 solid 5px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#sett:hover {
+    height: 200px;
+    width: 200px;
+}
+
+.sensor_area, .name_aria {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sensor_area {
+    grid-area: sensor_area;
+}
+
+.name_aria {
+    grid-area: name_area;
+    border-right: #888787 solid 5px;
+}
+
+.time_area {
+    grid-area: time_area;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.time {
+    font-size: 150px;
+    margin: 0 35px 0 0;
+}
+
+.col {
+    font-size: 30px;
+    margin: 0 35px 15px 0;
+}
+
+.name {
+    margin: 10px 10px 0 35px;
+    font-size: 30px;
+}
+
+.work_area {
+    margin-top: 50px;
+    width: 50%;
+    /* border: #888787 solid 5px; */
+    display: grid;
+    grid-template: 1fr 1fr / 3fr 2fr 5fr; 
+    grid-template-areas: ". . time_area" "name_area sensor_area .";
+}
