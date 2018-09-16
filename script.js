@@ -30,7 +30,7 @@ $(document).ready(function () {
         $('.hum_sens').html(hum_sens);
         $('.press_sens').html(press_sens);
         $('.air_sens').html(air_sens);
-    }, 3000);
+    }, 1000);
 
 
 });
