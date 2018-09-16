@@ -22,7 +22,7 @@ $(document).ready(function () {
         var hum_sens = thp_sens.field2
         var press_sens = thp_sens.field3
 
-
+        // публикация данных на страницу
         $clock.html(hour_data + '<span class="fade">:</span>' + minute_data);
         $date.html(week_data + ' - ' + month_data)
 
@@ -30,7 +30,6 @@ $(document).ready(function () {
         $('.hum_sens').html(hum_sens);
         $('.press_sens').html(press_sens);
         $('.air_sens').html(air_sens);
-
     }, 3000);
 
 

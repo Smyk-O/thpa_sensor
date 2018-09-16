@@ -41,7 +41,7 @@ body{
 
 .name_aria {
     grid-area: name_area;
-    border-right: #888787 solid 5px;
+    border-right: #888787 solid 3px;
 }
 
 .time_area {
