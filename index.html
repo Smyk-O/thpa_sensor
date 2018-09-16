@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>sensor_clock</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="work_area">
-        <!-- доделать настройку цвета -->
-        <!-- <div id="sett">
+        <!-- настройки -->
+
+        <div id="sett">
             <h3>setting</h3>
-            <p>background: </p><input type="color" name="back_col" id="back_col">
-            <p>font color: </p><input type="color" name="font_col" id="font_col">
-        </div> -->
+            <p>background: <input type="color" name="back_col" id="back_col"></p>
+            <p>font color: <input type="color" name="font_col" id="font_col"></p>
+        </div>
+
+        <!-- вывод информации -->
+
         <div class="time_area">
-                <span class="time">__<span class="fade">:</span>__</span>
-                <span class="col">weekday - month day</span>
+            <div class="time"> <span class="hour">__</span><span class="fade">:</span><span class="minute">__</span></div>
+            <span class="col">weekday - month day</span>
         </div>
 
         <div class="name_aria">
