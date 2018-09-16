@@ -67,17 +67,23 @@ $(document).ready(function () {
     });
 
     $(function () {
-        $("#back_col").change(function () {
+        $('#back_col').change(function () {
             var clr = $(this).val();
             document.querySelector('body').style.background = clr;
             localStorage.save_background_data = JSON.stringify(clr);
         });
 
-        $("#font_col").change(function () {
+        $('#font_col').change(function () {
             var clr = $(this).val();
             document.querySelector('body').style.color = clr;
             localStorage.save_color_data = JSON.stringify(clr);
         });
     });
+
+    $('.reset').click(function () {
+        document.querySelector('body').style.background = '#282828';
+        document.querySelector('body').style.color = '#DCDCDC';
+        localStorage.clear();
+    })
 
 });
