@@ -5,7 +5,8 @@ $(document).ready(function () {
         var $clock = $('.time');
         var $date = $('.col');
         // дата и время
-        clok_data = now.toLocaleString("ru", { hour: '2-digit', minute: '2-digit' });
+        hour_data = now.toLocaleString("ru", { hour: '2-digit' });
+        minute_data = now.toLocaleString("ru", { minute: '2-digit' });
         week_data = now.toLocaleString("en-US", { weekday: 'long' });
         month_data = now.toLocaleString("en-US", { month: 'long', day: '2-digit' });
 
@@ -22,7 +23,7 @@ $(document).ready(function () {
         var press_sens = thp_sens.field3
 
 
-        $clock.html(clok_data);
+        $clock.html(hour_data + '<span class="fade">:</span>' + minute_data);
         $date.html(week_data + ' - ' + month_data)
 
         $('.tem_sens').html(tem_sens);
@@ -30,7 +31,7 @@ $(document).ready(function () {
         $('.press_sens').html(press_sens);
         $('.air_sens').html(air_sens);
 
-    }, 2000);
+    }, 3000);
 
 
 });

@@ -74,3 +74,15 @@ body{
     grid-template: 1fr 1fr / 3fr 2fr 5fr; 
     grid-template-areas: ". . time_area" "name_area sensor_area .";
 }
+
+.fade {
+    animation-name: fadeInOut;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeInOut {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.1; }
+    100% { opacity: 1; }
+}
