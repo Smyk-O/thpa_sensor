@@ -6,100 +6,101 @@
 }
 body{
     background: #282828;
-    display: flex;
-    justify-content: center;
     transition: .5s ease-in-out;
     font-family: 'Roboto Slab', serif;
     color: #DCDCDC;
 }
 
-#sett {
-    margin: 35px;
-    height: 30px;
-    width: 30px;
-    border: #888787 solid 2px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: .5s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.work_area {
+    max-width: 1280px;
+    max-height: 800px;
+    margin: 20px;
+    /* border: #888787 solid 5px; */
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 3fr 4fr / 1fr 1fr 1fr; 
+    grid-template-areas: "sett time_area time_area" "home work outs";
 }
 
-#sett:hover * {
-    opacity: 1;
-    transition: 3s ease-in-out !important;
+#time_area, #home, #work, #outside, #sett {
+    background: rgba(120, 130, 134, 0.3);
 }
 
-#sett * {
-    opacity: 0;
-    transition: .2s ease-in-out;
-}
-
-#sett:hover {
-    height: 110px;
-    width: 140px;
-}
-
-
-input {
-    opacity: 0;
-}
-
-#back_col, #font_col {
-    width: 20px;
-    height: 20px;
-    border: #888787 solid 2px;
-    margin: 2px;
-    border-radius: 10px;
-}
-
-.sensor_area, .name_aria {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.sensor_area {
-    grid-area: sensor_area;
-}
-
-.name_aria {
-    grid-area: name_area;
-    border-right: #888787 solid 3px;
-}
-
-.time_area {
+#time_area {
+    min-height: 300px;
     grid-area: time_area;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
 .time {
-    font-size: 150px;
-    margin: 0 35px 0 0;
+    margin: -20px;
+    font-size: 140px;
+    font-weight: bold;
 }
 
 .col {
-    font-size: 30px;
-    margin: 0 35px 15px 0;
+    font-size: 40px;
+    margin: 10px;
+}
+
+#home {
+    grid-area: home;
+}
+
+#work {
+    grid-area: work;
+}
+
+#outside {
+    grid-area: outs;
+}
+
+#sett {
+    grid-area: sett;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+#sett, .sensor_area{
+    display: grid;
+    grid-template-areas: "name name" "title_area sensor_area";
+}
+
+.sensor_area {
+    min-height: 380px;
 }
 
 .name {
-    margin: 10px 10px 0 35px;
-    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: name;
+}
+.sensor {
+    grid-area: sensor_area;
 }
 
-.work_area {
-    margin-top: 50px;
-    width: 50%;
-    /* border: #888787 solid 5px; */
-    display: grid;
-    grid-template: 1fr 1fr / 3fr 2fr 5fr; 
-    grid-template-areas: ". . time_area" "name_area sensor_area .";
+.title_area {
+    grid-area: title_area;
+}
+
+
+.sensor, .title_area {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.title {
+    margin: 5px;
+    font-size: 39px;
 }
 
 .fade {
@@ -112,4 +113,42 @@ input {
     0%   { opacity: 1; }
     50%  { opacity: 0.1; }
     100% { opacity: 1; }
+}
+
+
+
+
+
+#sett {
+    background: url('data:image/svg+xml,%3Csvg%20width%3D%22220%22%20height%3D%22192%22%20viewBox%3D%220%200%20220%20192%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Ccircle%20cx%3D%22136.5%22%20cy%3D%2283.5%22%20r%3D%2283.5%22%20fill%3D%22black%22%2F%3E%0A%3Ccircle%20cx%3D%22136.5%22%20cy%3D%2283.5%22%20r%3D%2283.5%22%20fill%3D%22url(%23paint0_linear)%22%20fill-opacity%3D%220.5%22%2F%3E%0A%3Ccircle%20cx%3D%22136.5%22%20cy%3D%2283.5%22%20r%3D%2278.5%22%20stroke%3D%22black%22%20stroke-opacity%3D%220.8%22%20stroke-width%3D%2210%22%2F%3E%0A%3Cpath%20d%3D%22M24.5497%20124.834L27.8118%20123.387L27.5028%20119.831C27.457%20119.305%2027.4324%20118.77%2027.4301%20118.23C27.4301%20118.228%2027.4301%20118.226%2027.4301%20118.224L27.4299%20118.144C27.4299%20118.142%2027.4299%20118.14%2027.4299%20118.139C27.4325%20107.859%2035.4113%2099.851%2044.8598%2099.851H44.8599C44.862%2099.851%2044.885%2099.8512%2044.9324%2099.8535C44.9829%2099.8559%2045.05%2099.8602%2045.1354%2099.8671C45.3081%2099.881%2045.5242%2099.9032%2045.7821%2099.9345C46.2994%2099.9974%2046.91%20100.088%2047.5508%20100.192C48.835%20100.402%2050.1116%20100.649%2050.7632%20100.786L54.9885%20101.672L56.4817%2097.6215C63.7695%2077.85%2083.5195%2062%20106.463%2062C135.257%2062%20159.089%2089.8885%20159.089%20118.148V122.82L163.751%20123.136C180.313%20124.26%20195%20138.739%20195%20155.995C195%20172.906%20180.051%20186.905%20163.551%20186.905H34.5794C18.4194%20186.905%205%20173.245%205%20155.995C5%20149.687%207.18204%20143.045%2010.843%20137.317C14.5132%20131.575%2019.4445%20127.1%2024.5497%20124.834Z%22%20fill%3D%22black%22%2F%3E%0A%3Cpath%20d%3D%22M24.5497%20124.834L27.8118%20123.387L27.5028%20119.831C27.457%20119.305%2027.4324%20118.77%2027.4301%20118.23C27.4301%20118.228%2027.4301%20118.226%2027.4301%20118.224L27.4299%20118.144C27.4299%20118.142%2027.4299%20118.14%2027.4299%20118.139C27.4325%20107.859%2035.4113%2099.851%2044.8598%2099.851H44.8599C44.862%2099.851%2044.885%2099.8512%2044.9324%2099.8535C44.9829%2099.8559%2045.05%2099.8602%2045.1354%2099.8671C45.3081%2099.881%2045.5242%2099.9032%2045.7821%2099.9345C46.2994%2099.9974%2046.91%20100.088%2047.5508%20100.192C48.835%20100.402%2050.1116%20100.649%2050.7632%20100.786L54.9885%20101.672L56.4817%2097.6215C63.7695%2077.85%2083.5195%2062%20106.463%2062C135.257%2062%20159.089%2089.8885%20159.089%20118.148V122.82L163.751%20123.136C180.313%20124.26%20195%20138.739%20195%20155.995C195%20172.906%20180.051%20186.905%20163.551%20186.905H34.5794C18.4194%20186.905%205%20173.245%205%20155.995C5%20149.687%207.18204%20143.045%2010.843%20137.317C14.5132%20131.575%2019.4445%20127.1%2024.5497%20124.834Z%22%20fill%3D%22url(%23paint1_linear)%22%20fill-opacity%3D%220.5%22%2F%3E%0A%3Cpath%20d%3D%22M24.5497%20124.834L27.8118%20123.387L27.5028%20119.831C27.457%20119.305%2027.4324%20118.77%2027.4301%20118.23C27.4301%20118.228%2027.4301%20118.226%2027.4301%20118.224L27.4299%20118.144C27.4299%20118.142%2027.4299%20118.14%2027.4299%20118.139C27.4325%20107.859%2035.4113%2099.851%2044.8598%2099.851H44.8599C44.862%2099.851%2044.885%2099.8512%2044.9324%2099.8535C44.9829%2099.8559%2045.05%2099.8602%2045.1354%2099.8671C45.3081%2099.881%2045.5242%2099.9032%2045.7821%2099.9345C46.2994%2099.9974%2046.91%20100.088%2047.5508%20100.192C48.835%20100.402%2050.1116%20100.649%2050.7632%20100.786L54.9885%20101.672L56.4817%2097.6215C63.7695%2077.85%2083.5195%2062%20106.463%2062C135.257%2062%20159.089%2089.8885%20159.089%20118.148V122.82L163.751%20123.136C180.313%20124.26%20195%20138.739%20195%20155.995C195%20172.906%20180.051%20186.905%20163.551%20186.905H34.5794C18.4194%20186.905%205%20173.245%205%20155.995C5%20149.687%207.18204%20143.045%2010.843%20137.317C14.5132%20131.575%2019.4445%20127.1%2024.5497%20124.834Z%22%20stroke%3D%22black%22%20stroke-width%3D%2210%22%2F%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22paint0_linear%22%20x1%3D%22136.5%22%20y1%3D%220%22%20x2%3D%22136.5%22%20y2%3D%22167%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%3Cstop%20offset%3D%220.232044%22%20stop-color%3D%22white%22%2F%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22white%22%20stop-opacity%3D%220%22%2F%3E%0A%3C%2FlinearGradient%3E%0A%3ClinearGradient%20id%3D%22paint1_linear%22%20x1%3D%22100%22%20y1%3D%2257%22%20x2%3D%22100%22%20y2%3D%22192%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%3Cstop%20stop-color%3D%22white%22%2F%3E%0A%3Cstop%20offset%3D%221%22%20stop-color%3D%22white%22%20stop-opacity%3D%220%22%2F%3E%0A%3C%2FlinearGradient%3E%0A%3C%2Fdefs%3E%0A%3C%2Fsvg%3E' ) no-repeat center center rgba(120, 130, 134, 0.3);
+    cursor: pointer;
+    transition: 1s ease-in-out	;
+}
+
+#sett:hover {
+    background: rgba(120, 130, 134, 0.3);
+    transition: 1s ease-in-out	 !important;
+}
+
+#sett:hover * {
+    opacity: 1;
+    transition: 3s ease-in-out	 !important;
+}
+
+#sett * {
+    margin-left: 10px;
+    opacity: 0;
+    transition: .2s ease-in-out	;
+}
+
+input {
+    opacity: 0;
+}
+
+#back_col, #font_col {
+    width: 40px;
+    height: 40px;
+    border: #888787 solid 2px;
+    margin: 2px;
+    border-radius: 10px;
 }

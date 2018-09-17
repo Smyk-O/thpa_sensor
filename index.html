@@ -15,32 +15,71 @@
         <!-- настройки -->
 
         <div id="sett">
-            <h3>setting</h3>
-            <p>background: <input type="color" name="back_col" id="back_col"></p>
-            <p>font color: <input type="color" name="font_col" id="font_col"></p>
-            <p class="reset">reset</p>
+            <h3 class="name">setting</h3>
+            <div class="title_area">                
+                    <span class="title">background <input type="color" name="back_col" id="back_col"></span>
+                    <span class="title">font color <input type="color" name="font_col" id="font_col"></span>
+                    <span class="title reset">reset</span>
+                </div>        
         </div>
 
         <!-- вывод информации -->
 
-        <div class="time_area">
+        <div id="time_area">
             <div class="time"> <span class="hour">__</span><span class="fade">:</span><span class="minute">__</span></div>
             <span class="col">weekday - month day</span>
         </div>
 
-        <div class="name_aria">
-            <span class="name">Temperature</span>
-            <span class="name">Humidity</span>
-            <span class="name">Pressure</span>
-            <span class="name">Air pollution</span>
+        <div id="home" class="sensor_area">
+            <h3 class="name">Home</h3>
+            <div class="title_area">                
+                <span class="title">Temperature</span>
+                <span class="title">Humidity</span>
+                <span class="title">Pressure</span>
+                <span class="title">Air pollution</span>
+            </div>
+            <div class="sensor">
+                <span class="title tem_sens">__.__</span>
+                <span class="title hum_sens">__.__</span>
+                <span class="title press_sens">__.__</span>
+                <span class="title air_sens">__</span>
+            </div>
         </div>
-        <div class="sensor_area">
-            <span class="name tem_sens">__.__</span>
-            <span class="name hum_sens">__.__</span>
-            <span class="name press_sens">__.__</span>
-            <span class="name air_sens">__</span>
+
+        <div id="work" class="sensor_area">
+            <h3 class="name">Work</h3>
+            <div class="title_area">
+                <span class="title">Temperature</span>
+                <span class="title">Humidity</span>
+                <span class="title">Pressure</span>
+                <span class="title">Air pollution</span>
+            </div>
+            <div class="sensor">
+                <span class="title tem_sens">__.__</span>
+                <span class="title hum_sens">__.__</span>
+                <span class="title press_sens">__.__</span>
+                <span class="title air_sens">__</span>
+            </div>
         </div>
+
+        <div id="outside" class="sensor_area">
+            <h3 class="name">Outside</h3>
+            <div class="title_area">
+                <span class="title">Temperature</span>
+                <span class="title">Humidity</span>
+                <span class="title">Pressure</span>
+                <span class="title">Air pollution</span>
+            </div>
+            <div class="sensor">
+                <span class="title tem_sens">__.__</span>
+                <span class="title hum_sens">__.__</span>
+                <span class="title press_sens">__.__</span>
+                <span class="title air_sens">__</span>
+            </div>
+        </div>
+
     </div>
+
     <link rel="stylesheet" href="style.css">
     <script src="https://yastatic.net/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
