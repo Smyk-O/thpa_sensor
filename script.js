@@ -35,9 +35,37 @@ $(document).ready(function () {
                 var hum_sens = thp_sens.field2;
                 var press_sens = thp_sens.field3;
 
-                $('.tem_sens').html(tem_sens);
-                $('.hum_sens').html(hum_sens);
-                $('.press_sens').html(press_sens);
+                $('#home .tem_sens').html(tem_sens);
+                $('#home .hum_sens').html(hum_sens);
+                $('#home .press_sens').html(press_sens);
+            });
+
+        fetch('https://api.thingspeak.com/channels/486018/feeds.json')
+            .then(res => res.json())
+            .then(json => {
+                thp_sens = json.feeds[99];
+
+                var tem_sens = thp_sens.field1;
+                var hum_sens = thp_sens.field2;
+
+                $('#work .tem_sens').html(tem_sens);
+                $('#work .hum_sens').html(hum_sens);
+            });
+
+        fetch('https://api.thingspeak.com/channels/541136/feeds.json')
+            .then(res => res.json())
+            .then(json => {
+                thp_sens = json.feeds[99];
+
+                var tem_sens = thp_sens.field1;
+                var hum_sens = thp_sens.field2;
+                var press_sens = thp_sens.field3;
+                var illum_sens = thp_sens.field4;
+outside
+                $('#outside .tem_sens').html(tem_sens);
+                $('#outside .hum_sens').html(hum_sens);
+                $('#outside .press_sens').html(press_sens);
+                $('#outside .illum_sens').html(illum_sens);
             });
     };
 
