@@ -61,7 +61,7 @@ $(document).ready(function () {
                 var hum_sens = thp_sens.field2;
                 var press_sens = thp_sens.field3;
                 var illum_sens = thp_sens.field4;
-outside
+
                 $('#outside .tem_sens').html(tem_sens);
                 $('#outside .hum_sens').html(hum_sens);
                 $('#outside .press_sens').html(press_sens);
