@@ -19,6 +19,7 @@ $(document).ready(function () {
 
     function init_sens() {
         // показания счетчиков
+        // дом = воздух
         fetch('https://api.waqi.info/api/feed/@8641/obs.en.json')
             .then(res => res.json())
             .then(json => {
@@ -39,7 +40,7 @@ $(document).ready(function () {
                 $('#home .hum_sens').html(hum_sens);
                 $('#home .press_sens').html(press_sens);
             });
-
+        // работа
         fetch('https://api.thingspeak.com/channels/486018/feeds.json')
             .then(res => res.json())
             .then(json => {
@@ -51,7 +52,7 @@ $(document).ready(function () {
                 $('#work .tem_sens').html(tem_sens);
                 $('#work .hum_sens').html(hum_sens);
             });
-
+        // улица
         fetch('https://api.thingspeak.com/channels/541136/feeds.json')
             .then(res => res.json())
             .then(json => {
@@ -109,8 +110,8 @@ $(document).ready(function () {
     });
 
     $('.reset').click(function () {
-        document.querySelector('body').style.background = '#282828';
-        document.querySelector('body').style.color = '#DCDCDC';
+        document.querySelector('body').style.background = '';
+        document.querySelector('body').style.color = '';
         localStorage.clear();
     })
 
